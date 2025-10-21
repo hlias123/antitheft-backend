@@ -1,6 +1,6 @@
 ﻿const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 5000;  // مهم: استخدم process.env.PORT
+const PORT = 5000;
 
 console.log("🔄 Starting server...");
 
@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
                 <ul>
                     <li>🚪 البورت / Port / Θύρα: <strong>${PORT}</strong></li>
                     <li>🕐 الوقت / Time / Ώρα: <strong>${new Date().toLocaleString()}</strong></li>
-                    <li>🌐 العنوان / Address / Διεύθυνση: <strong>${req.get('host')}</strong></li>
+                    <li>🌐 العنوان / Address / Διεύθυνση: <strong>localhost:${PORT}</strong></li>
                 </ul>
             </div>
         </body>
@@ -53,17 +53,9 @@ app.get("/", (req, res) => {
     res.send(html);
 });
 
-// نقاط API الأخرى تبقى كما هي
-app.get("/check-email", (req, res) => {
-    res.json({ success: true, message: "Email service ready" });
-});
-
-app.get("/test-email", (req, res) => {
-    res.json({ success: true, message: "Email test endpoint" });
-});
-
 app.listen(PORT, () => {
-    console.log("🎉 ✅ Server is RUNNING on port: " + PORT);
+    console.log("🎉 ✅ Server is RUNNING on: http://localhost:" + PORT);
     console.log("🌍 Multi-language support: Arabic, English, Greek");
-    console.log("📧 Email service ready");
+    console.log("📱 OPEN YOUR BROWSER and go to: http://localhost:" + PORT + "/?lang=en");
+    console.log("⏹️  Press Ctrl+C to stop the server");
 });
