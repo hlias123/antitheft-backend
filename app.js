@@ -68,3 +68,5 @@ app.listen(PORT, () => {
     console.log("📧 Email service ready");
 });
 // Force redeploy - Multi-language support
+// Railway Start Fix
+console.log("🚀 AntiTheft System Starting...");
