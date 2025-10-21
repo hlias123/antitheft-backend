@@ -67,3 +67,4 @@ app.listen(PORT, () => {
     console.log("🌍 Multi-language support: Arabic, English, Greek");
     console.log("📧 Email service ready");
 });
+// Force redeploy - Multi-language support
