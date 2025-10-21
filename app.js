@@ -135,3 +135,5 @@ app.listen(PORT, "0.0.0.0", () => {
     console.log("🚀 AntiTheft System running on port " + PORT);
     console.log("🌍 Multi-language support: Arabic, English, Greek");
 });
+
+// Force Railway redeploy - Multi-language system
